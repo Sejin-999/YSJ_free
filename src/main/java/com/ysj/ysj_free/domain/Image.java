@@ -10,4 +10,6 @@ public class Image {
     private String fileName;
     private String filePath;
     private Date createdDate;
+
+    private String UserId;
 }
