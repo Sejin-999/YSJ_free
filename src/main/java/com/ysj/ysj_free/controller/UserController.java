@@ -4,6 +4,7 @@ import com.ysj.ysj_free.domain.User;
 import com.ysj.ysj_free.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
@@ -23,7 +24,7 @@ public class UserController {
     public void createUser(@RequestBody User user) {
         userService.insertUser(user);
     }
-
+    @Transactional
     @PostMapping("/user/login")
     public String loginUser(@RequestParam String id, @RequestParam String password, HttpSession session) {
         User user = userService.loginUser(id, password);
@@ -31,7 +32,7 @@ public class UserController {
             session.setAttribute("user", user);
             return "redirect:/images"; // ImageBoard 페이지로 리다이렉트
         } else {
-            return "redirect:/login"; // 로그인 실패 시 로그인 페이지로 리다이렉트
+            return "redirect:/loginFailure"; // 로그인 실패 시 로그인 페이지로 리다이렉트
         }
     }
 

@@ -44,6 +44,9 @@ public class PageController {
         model.addAttribute("images", images); // images를 모델에 추가
         return "ImageBoard"; // 이미지를 표시할 JSP 페이지의 이름을 반환
     }
-
+    @GetMapping("/loginFailure")
+    public String loginFailure() {
+        return "loginFailure"; // 실패 페이지의 뷰 이름 반환
+    }
 
 }
