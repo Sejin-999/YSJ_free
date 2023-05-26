@@ -5,4 +5,8 @@
         INSERT INTO image ( fileName, filePath, createdDate , userId)
         VALUES ( #{fileName}, #{filePath}, #{createdDate}, #{userId})
     </insert>
+
+    <select id="getAllImage" resultType="com.ysj.ysj_free.domain.Image">
+        SELECT * FROM image
+    </select>
 </mapper>
