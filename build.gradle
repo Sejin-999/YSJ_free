@@ -31,7 +31,8 @@ dependencies {
     // JSP 지원을 위한 추가 종속성
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     implementation 'javax.servlet:jstl'
-
+    //AOP
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
 
 }
 

@@ -34,12 +34,10 @@ public class ImageController {
                 byte[] bytes = file.getBytes();
                 String fileName = file.getOriginalFilename();
 
-                // 리소스 경로 얻기
-                Resource resource = resourceLoader.getResource("classpath:static/images");
-                String resourcePath = resource.getFile().getAbsolutePath();
-
                 // 파일 저장
-                String filePath = resourcePath + File.separator + fileName;
+                String basePath = System.getProperty("user.dir"); // 애플리케이션 실행 경로를 얻음
+                String relativePath = "src/main/resources/static/images/" + fileName;
+                String filePath = basePath + File.separator + relativePath;
                 Path path = Paths.get(filePath);
                 Files.write(path, bytes);
 
@@ -51,7 +49,7 @@ public class ImageController {
                 image.setUserId(id);
                 imageService.saveImage(image);
 
-                return "redirect:/";  // 업로드 성공 페이지로 이동
+                return "redirect:/images";  // 업로드 성공 페이지로 이동
             } catch (Exception e) {
                 e.printStackTrace();
             }

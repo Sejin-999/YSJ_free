@@ -8,6 +8,7 @@
     <title>Image Board</title>
 </head>
 <body>
+<%@ include file="header.jsp" %>
 <h1>Image Board</h1>
 <%-- Loop through the list of images and display them --%>
 <c:forEach var="image" items="${images}">
