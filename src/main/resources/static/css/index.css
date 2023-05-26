@@ -1,0 +1,19 @@
+@import "reset.css";
+.box {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+.box .header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+.box .main {
+  font-size: 18px;
+  color: #666;
+}/*# sourceMappingURL=index.css.map */

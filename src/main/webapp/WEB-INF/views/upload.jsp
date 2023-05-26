@@ -3,8 +3,10 @@
 <html>
 <head>
     <title>이미지 업로드</title>
+    <link rel="stylesheet" type="text/css" href="/css/upload.css">
 </head>
 <body>
+<%@ include file="header.jsp" %>
 <h1>이미지 업로드</h1>
 
 <form action="/upload/{id}" method="post" enctype="multipart/form-data">

@@ -3,11 +3,17 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
 </head>
 <body>
-<h1>
     <%@ include file="header.jsp" %>
-    Hello world!
-</h1>
+    <div class="box">
+        <div class="header"> 
+            <span>이미지 공유 사이트</span>
+        </div>
+        <div class="main">
+            <span>스프링 과제를 위한 사이트</span>
+        </div>
+    </div>
 </body>
 </html>

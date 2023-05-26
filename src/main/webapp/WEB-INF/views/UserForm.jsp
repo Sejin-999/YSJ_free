@@ -7,6 +7,7 @@
     <title>등록</title>
 </head>
 <body>
+    <%@ include file="header.jsp" %>
 <div align=center>
     <header>학생 정보 등록</header>
     <form name=form1 action="../member/register/" method="post">

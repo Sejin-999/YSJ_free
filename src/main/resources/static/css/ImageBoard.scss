@@ -1,0 +1,33 @@
+@import "reset.css";
+.container{
+    margin-top: 20px;
+    border-top: 3px solid black;
+    background-color: #f5fdc6;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    .imageBox{
+        font-weight: bold;
+        color: #333;
+        background-color: #f1f5d8;
+        margin-top: 2rem;
+        width: 23%;
+        padding: 10px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        font-size: 30px;
+        margin-left: 1rem;
+        
+        .imageFile {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        h3{
+            text-align: center;
+            margin-top: 1rem;
+        }
+          
+    }
+}

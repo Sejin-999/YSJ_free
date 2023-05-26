@@ -16,7 +16,7 @@
     </div>
     <% } else { %>
     <div class="box">
-        <a href="/page/login">로그인</a>
+        <h3><a href="/page/login">로그인</a></h3>
     </div>
     <% } %>
 </header>
