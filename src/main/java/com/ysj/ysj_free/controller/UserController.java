@@ -20,9 +20,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/user")
-    public void createUser(@RequestBody User user) {
+    @PostMapping("/user/register")
+    public String createUser(@ModelAttribute User user) {
+
         userService.insertUser(user);
+        return "redirect:/page/login";
+
     }
     @Transactional
     @PostMapping("/user/login")
@@ -37,14 +40,16 @@ public class UserController {
     }
 
 
-    @PutMapping("/user/{id}")
-    public void updateUser(@PathVariable String id, @RequestBody User user) {
-        user.setId(id);
+    @PostMapping("/user/update")
+    public String updateUser(@ModelAttribute User user) {
         userService.updateUser(user);
+        return "redirect:/images"; // ImageBoard 페이지로 리다이렉트
     }
 
-    @DeleteMapping("/user/{id}")
-    public void deleteUser(@PathVariable String id) {
+    @PostMapping("/user/{id}")
+    public String deleteUser(@PathVariable String id,HttpSession session) {
         userService.deleteUser(id);
+        session.invalidate();
+        return "redirect:/";
     }
 }

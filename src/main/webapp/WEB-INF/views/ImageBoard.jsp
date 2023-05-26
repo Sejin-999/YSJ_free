@@ -10,12 +10,11 @@
 </head>
 <body>
     <%@ include file="header.jsp" %>
-    <h1>Image Board</h1>
     <%-- Loop through the list of images and display them --%>
     <div class="container">
         <c:forEach var="image" items="${images}">
-            <div class="imageBox>
-                <img class="imageFile" src="images/${image.fileName}" alt="Image">
+            <div class="imageBox">
+                <img src="images/${image.fileName}" alt="Image" class="imageFile">
                 <h3>${image.fileName}</h3>
             </div>
         </c:forEach>

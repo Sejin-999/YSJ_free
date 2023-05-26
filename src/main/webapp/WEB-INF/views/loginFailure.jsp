@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
-    <%@ include file="header.jsp" %>
     <div class="container">
         <div class="box">
           <h1>로그인의 실패</h1>

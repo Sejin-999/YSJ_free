@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
-    <%@ include file="header.jsp" %>
     <div class="container">
         <div class="box">
           <h1>로그인</h1>
@@ -18,6 +17,7 @@
             <br /><br />
             <input type="submit" value="로그인" />
           </form>
+            <h3><a href="/user/register">회원가입</a></h3>
         </div>
       </div>
 </body>

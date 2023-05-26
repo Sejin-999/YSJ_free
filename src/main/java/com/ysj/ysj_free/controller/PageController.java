@@ -37,7 +37,14 @@ public class PageController {
     public String login() {
         return "login";
     }
-
+    @GetMapping("/page/updateUser")
+    public String updateUserForm() {
+        return "updateUser";
+    }
+    @GetMapping("/user/register")
+    public String registerUserForm() {
+        return "register";
+    }
     @GetMapping("/images")
     public String showImages(Model model) {
         List<Image> images = imageService.getAllImage(); // 이미지 목록을 가져오는 메소드를 가정

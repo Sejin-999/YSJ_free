@@ -11,8 +11,9 @@
     <% User user = (User) session.getAttribute("user"); %>
     <% if (user != null) { %>
     <div class="box">
-        <h3>로그인 사용자: <%= user.getUsername() %></h3>
+        <h3><%= user.getUsername() %></h3>
         <h3><a href="/page/ImageUpload">이미지 업로드</a></h3>
+        <h3><a href="/page/updateUser">정보 수정</a></h3>
     </div>
     <% } else { %>
     <div class="box">
