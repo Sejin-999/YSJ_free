@@ -1,14 +1,17 @@
 package com.ysj.ysj_free.controller;
 
 import com.ysj.ysj_free.domain.Image;
+import com.ysj.ysj_free.domain.User;
 import com.ysj.ysj_free.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -39,7 +42,7 @@ public class ImageController {
                 image.setUserId(id);
                 imageService.saveImage(image);
 
-                return "redirect:/success";  // 업로드 성공 페이지로 이동
+                return "redirect:/";  // 업로드 성공 페이지로 이동
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -47,4 +50,6 @@ public class ImageController {
 
         return "redirect:/error";  // 업로드 실패 페이지로 이동
     }
+
+
 }

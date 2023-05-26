@@ -4,6 +4,11 @@
     <select id="getAllUsers" resultType="com.ysj.ysj_free.domain.User">
         SELECT * FROM user
     </select>
+
+    <select id="loginUser" parameterType="String" resultType="com.ysj.ysj_free.domain.User">
+        SELECT * FROM user WHERE id = #{id} AND password = #{password}
+    </select>
+
     <insert id="insertUser" parameterType="com.ysj.ysj_free.domain.User">
         INSERT INTO user (id , userName, password) VALUES (#{id}, #{userName}, #{password})
     </insert>

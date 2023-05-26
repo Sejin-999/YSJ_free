@@ -10,4 +10,7 @@ public interface UserMapper {
     void insertUser(User user);
     void updateUser(User user);
     void deleteUser(String id);
+
+    User loginUser(String id , String password);
+
 }

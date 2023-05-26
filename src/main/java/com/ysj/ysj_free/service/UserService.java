@@ -27,4 +27,11 @@ public class UserService {
     public void deleteUser(String id) {
         userMapper.deleteUser(id);
     }
+
+    public User loginUser(String id , String password) {
+        User user = userMapper.loginUser(id , password);
+        return user;
+    }
+
+
 }
