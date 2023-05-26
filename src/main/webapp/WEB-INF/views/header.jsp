@@ -4,18 +4,21 @@
 <html>
 <head>
     <title>헤더</title>
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
-<header>
-
+<header class="header-class">
     <% User user = (User) session.getAttribute("user"); %>
     <% if (user != null) { %>
-    <h3>로그인 사용자: <%= user.getUsername() %></h3>
-    <h3><a href="/page/ImageUpload">이미지 업로드</a></h3>
+    <div class="box">
+        <h3>로그인 사용자: <%= user.getUsername() %></h3>
+        <h3><a href="/page/ImageUpload">이미지 업로드</a></h3>
+    </div>
     <% } else { %>
-    <a href="/page/login">로그인</a>
+    <div class="box">
+        <a href="/page/login">로그인</a>
+    </div>
     <% } %>
-
 </header>
 </body>
 </html>
