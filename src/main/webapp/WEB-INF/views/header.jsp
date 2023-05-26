@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>헤더</title>
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
 </head>
 <body>
 <header class="header-class">
