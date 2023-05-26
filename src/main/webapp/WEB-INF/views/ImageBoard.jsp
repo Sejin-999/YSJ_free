@@ -13,7 +13,7 @@
 <c:forEach var="image" items="${images}">
     <div>
         <h3>${image.fileName}</h3>
-        <img src="${pageContext.request.contextPath}${image.filePath}" alt="Image">
+        <img src="images/${image.fileName}" alt="Image">
     </div>
 </c:forEach>
 

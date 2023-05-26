@@ -35,7 +35,7 @@ public class ImageController {
                 String fileName = file.getOriginalFilename();
 
                 // 리소스 경로 얻기
-                Resource resource = resourceLoader.getResource("classpath:Image/");
+                Resource resource = resourceLoader.getResource("classpath:static/images");
                 String resourcePath = resource.getFile().getAbsolutePath();
 
                 // 파일 저장
